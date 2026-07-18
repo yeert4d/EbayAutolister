@@ -1,6 +1,7 @@
 # EbayAutolister
 
 A Firefox extension designed to reduce repetitive data entry when creating vinyl listings on eBay.
+PLEASE NOTE: This is not yet an approved firefox extension and therefore must be added as a "temporary extension", to do this, when opening firefox type "about:debugging" into the address bar, then click "this firefox", and finally "load temporary add-on" and select the "manifest.js" file. This will need to be repeated each time you close/launch firefox. Within the next week the extension should just be downloadable from the firefox store.
 
 The extension extracts release metadata from Discogs, generates an eBay-ready title within the 80-character limit, fills matching fields in an existing shop description template, and provides a condition-grading panel for Seller Notes.
 
