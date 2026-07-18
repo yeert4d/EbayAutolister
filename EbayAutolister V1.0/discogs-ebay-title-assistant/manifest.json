@@ -1,0 +1,77 @@
+{
+  "manifest_version": 3,
+  "name": "Discogs eBay Title Assistant",
+  "version": "1.0.0",
+  "description": "Firefox extension that generates eBay vinyl listing titles from Discogs, fills an existing listing template, and provides a condition-grading assistant for Seller Notes and description fields.",
+  "permissions": [
+    "clipboardWrite",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.discogs.com/*",
+    "*://*.ebay.co.uk/*",
+    "*://*.ebay.com/*"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.discogs.com/release/*"
+      ],
+      "js": [
+        "discogs-content.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://*.ebay.co.uk/*",
+        "*://*.ebay.com/*"
+      ],
+      "js": [
+        "ebay-content.js"
+      ]
+    }
+  ],
+  "commands": {
+    "copy-ebay-title": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y"
+      },
+      "description": "Generate and copy an eBay title from Discogs"
+    },
+    "fill-ebay-listing": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E"
+      },
+      "description": "Fill the active eBay listing from saved Discogs data"
+    },
+    "open-options": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+U"
+      },
+      "description": "Open title assistant settings"
+    }
+  },
+  "action": {
+    "default_title": "Run Discogs/eBay Title Assistant"
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "discogs-ebay-title-assistant@william-alleeson",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  }
+}

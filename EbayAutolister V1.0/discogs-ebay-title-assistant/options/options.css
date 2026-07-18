@@ -1,0 +1,126 @@
+
+:root {
+  color-scheme: light dark;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 32px 18px;
+  background: Canvas;
+  color: CanvasText;
+}
+
+.panel {
+  width: min(720px, 100%);
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 28px;
+}
+
+section + section {
+  margin-top: 30px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.help {
+  margin: 6px 0 12px;
+  line-height: 1.5;
+  opacity: 0.86;
+}
+
+input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid GrayText;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.preview-section {
+  margin-top: 18px;
+}
+
+.preview-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.preview {
+  min-height: 22px;
+  padding: 12px;
+  border-radius: 6px;
+  background: color-mix(in srgb, CanvasText 8%, Canvas);
+  overflow-wrap: anywhere;
+}
+
+.length-message {
+  min-height: 20px;
+  margin-top: 7px;
+  font-size: 14px;
+}
+
+.toggle-section {
+  padding: 18px;
+  border: 1px solid GrayText;
+  border-radius: 8px;
+}
+
+.toggle-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.toggle-row input {
+  margin-top: 3px;
+  transform: scale(1.15);
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 6px;
+  background: #0060df;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+button.secondary {
+  background: #5b5b66;
+}
+
+.status {
+  min-height: 22px;
+  margin-top: 12px;
+  font-weight: 700;
+}
+
+hr {
+  margin: 30px 0 18px;
+  border: 0;
+  border-top: 1px solid GrayText;
+}
+
+.shortcut-list p {
+  margin: 8px 0;
+}

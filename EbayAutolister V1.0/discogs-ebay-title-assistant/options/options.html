@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Discogs eBay Title Assistant Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main class="panel">
+    <h1>Title Assistant Settings</h1>
+
+    <form id="settings-form">
+      <section>
+        <label for="suffix">Listing suffix</label>
+        <p class="help">
+          This is added only when the complete title remains within eBay's
+          80-character limit. Leave it blank to disable the suffix.
+        </p>
+
+        <input
+          id="suffix"
+          name="suffix"
+          type="text"
+          maxlength="80"
+          autocomplete="off"
+          placeholder="JAZZ - GREAT COPY!"
+        >
+
+        <div class="preview-section" aria-live="polite">
+          <span class="preview-label">Example</span>
+          <div id="preview" class="preview"></div>
+          <div id="length-message" class="length-message"></div>
+        </div>
+      </section>
+
+      <section class="toggle-section">
+        <label class="toggle-row" for="autofill-description">
+          <input
+            id="autofill-description"
+            name="autofill-description"
+            type="checkbox"
+          >
+          <span>
+            Autofill labelled fields in the existing eBay item description
+          </span>
+        </label>
+
+        <p class="help">
+          When enabled, the eBay shortcut searches the shop's existing
+          description template for Artist, Title, Label and Catalogue Number,
+          then replaces only their values. It does not recreate the template.
+        </p>
+      </section>
+
+      <div class="buttons">
+        <button type="submit">Save settings</button>
+        <button id="reset-button" type="button" class="secondary">
+          Reset defaults
+        </button>
+      </div>
+
+      <p id="status" class="status" role="status"></p>
+    </form>
+
+    <hr>
+
+    <div class="shortcut-list">
+      <p><strong>Ctrl+Shift+Y:</strong> Generate, save and copy on Discogs.</p>
+      <p><strong>Ctrl+Shift+E:</strong> Fill the active eBay draft.</p>
+      <p><strong>Ctrl+Shift+U:</strong> Open this settings page.</p>
+    </div>
+  </main>
+
+  <script src="options.js"></script>
+</body>
+</html>
